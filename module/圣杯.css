@@ -1,0 +1,155 @@
+/*<!--————————————————-->*/
+/*<!--版权声明：本文为CSDN博主「良雨」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。-->*/
+/*<!--原文链接：https://blog.csdn.net/qq_34821198/article/details/90080222-->*/
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    min-width: 400px; /*设置父盒子的最小宽度*/
+    height: 200px;
+    background-color: red;
+    padding: 0 200px; /*给左右两个盒子预留出位置*/
+}
+
+.center {
+    width: 100%; /*设置中间盒子的宽度为100%、让其独占一行*/
+    height: 200px;
+    float: left;
+    background-color: yellow;
+}
+
+.left {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    float: left;
+    margin-left: -100%; /* 参考的依据 父级内容的比例 */
+    position: relative;
+    left: -200px;
+}
+
+.right {
+    width: 200px;
+    height: 200px;
+    background-color: yellowgreen;
+    float: left;
+
+    position: relative;
+    margin-right: -100%;
+}
+
+/*https://blog.csdn.net/weixin_44623429/article/details/89031382?spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-13.pc_relevant_default&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ERate-13.pc_relevant_default&utm_relevant_index=16*/
+
+
+/*flex*/
+/*header{*/
+/*    height: 80px;*/
+/*    background-color: #cccccc;*/
+/*}*/
+/*.box{*/
+/*    height: 200px;*/
+/*    background-color: yellow;*/
+/*    display: flex;*/
+/*}*/
+/*.box .middle{*/
+/*    height: 200px;*/
+/*    background: pink;*/
+/*    flex: 1;*/
+/*}*/
+/*.box .left{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: red;*/
+/*}*/
+/*.box .right{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: purple;*/
+/*}*/
+/*footer{*/
+/*    height: 100px;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+
+
+/*浮动*/
+
+/*header{*/
+/*    height: 80px;*/
+/*    background-color: #bf8a8a;*/
+/*}*/
+/*.box{*/
+/*    height: 200px;*/
+/*    background-color: yellow;*/
+/*}*/
+/*.box .left{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: red;*/
+/*    float: left;*/
+/*}*/
+/*.box .right{*/
+/*    width: 200px;*/
+/*    height: 200px;*/
+/*    background-color: purple;*/
+/*    float: right;*/
+/*}*/
+/*.box .middle{*/
+/*    height: 200px;*/
+/*    !*width: calc(100% - 200px);*!*/
+/*    background-color: pink;*/
+/*}*/
+/*footer{*/
+/*    height: 100px;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/
+
+
+/*定位*/
+
+/*header{*/
+/*    height: 80px;*/
+/*    background-color: #cccccc;*/
+/*}*/
+/*.box{*/
+/*    height: 200px;*/
+/*    background-color: yellow;*/
+/*    position: relative;*/
+/*    width: 100%;*/
+/*}*/
+/*.box .left{*/
+/*    width: 20%;*/
+/*    height: 100%;*/
+/*    background-color: red;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*}*/
+/*.box .middle{*/
+/*    height: 100%;*/
+/*    width: 60%;*/
+/*    background-color: pink;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 20%;*/
+/*}*/
+/*.box .right{*/
+/*    width: 20%;*/
+/*    height: 100%;*/
+/*    background-color: purple;*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*}*/
+/*footer{*/
+/*    height: 100px;*/
+/*    background-color: black;*/
+/*    color: white;*/
+/*}*/

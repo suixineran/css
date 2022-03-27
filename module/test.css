@@ -1,0 +1,386 @@
+/*.line-item1 {*/
+/*    background-color: red;*/
+/*    line-height: 40px;*/
+/*}*/
+/*.line-item2 {*/
+/*    background-color: green;*/
+/*    line-height: 60px;*/
+/*}*/
+/*.line-item3 {*/
+/*    background-color: darkgoldenrod;*/
+/*    line-height: 80px;*/
+/*}*/
+
+/* 单栏的居中---------------------------------*/
+/*.header{*/
+/*    margin:0 auto;*/
+/*    max-width: 960px;*/
+/*    height:100px;*/
+/*    background-color: blue;*/
+/*}*/
+/*.content{*/
+/*    margin: 0 auto;*/
+/*    max-width: 960px;*/
+/*    height: 400px;*/
+/*    background-color: aquamarine;*/
+/*}*/
+/*.footer{*/
+/*    margin: 0 auto;*/
+/*    max-width: 960px;*/
+/*    height: 100px;*/
+/*    background-color: aqua;*/
+/*}*/
+
+/* 单栏的通栏---------------------------------*/
+
+/*.header{*/
+/*    margin:0 auto;*/
+/*    !*max-width: 960px;*!*/
+/*    height:100px;*/
+/*    background-color: blue;*/
+/*}*/
+/*.nav{*/
+/*    margin: 0 auto;*/
+/*    !*max-width: 800px;*!*/
+/*    background-color: darkgray;*/
+/*    height: 50px;*/
+/*}*/
+/*.content{*/
+/*    margin: 0 auto;*/
+/*    !*max-width: 800px;*!*/
+/*    height: 400px;*/
+/*    background-color: aquamarine;*/
+/*}*/
+/*.footer{*/
+/*    margin: 0 auto;*/
+/*    !*max-width: 960px;*!*/
+/*    height: 100px;*/
+/*    background-color: aqua;*/
+/*}*/
+/*.span-class {*/
+/*    height: 60px;*/
+/*    width: 300px;*/
+/*    border: 1px solid red;*/
+/*    margin-left: 29px;*/
+/*    margin-top: 20px;*/
+/*    font-size: 48px;*/
+/*}*/
+
+/*.inline-block-class {*/
+/*    width:100%;*/
+/*    background: yellow;*/
+/*    height: 100px;*/
+/*    text-align: center;*/
+/*    line-height: 100px;*/
+/*    !*word-spacing: -6px;*!*/
+/*}*/
+/*a {*/
+/*    color: #fff;*/
+/*    text-decoration: none;*/
+/*    display: inline-block;*/
+/*    width: 100px;*/
+/*    height: 30px;*/
+/*    line-height: 30px;*/
+/*    background: red;*/
+/*    margin: -3px;*/
+/*    !*word-spacing: -6px;*!*/
+/*}*/
+
+
+/*  2栏的布局   ------------------*/
+/*.parent {*/
+/*    !*height: 100%;*!*/
+/*    overflow: hidden;*/
+/*    zoom: 1;*/
+/*}*/
+/*.left {*/
+/*    !*height: 100%;*!*/
+/*    float: left;*/
+/*    margin-right: 20px;*/
+/*}*/
+/*.right {*/
+/*    !*width:100%;*!*/
+/*    !*height: 100%;*!*/
+/*    overflow: hidden;*/
+/*    !*zoom: 1;*!*/
+/*}*/
+
+/*五、粘连布局88****************************/
+/** {*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*html,*/
+/*body {*/
+/*    height: 100%;//高度一层层继承下来*/
+/*    box-sizing:border-box;*/
+/*}*/
+/*#wrap {*/
+/*    min-height: 100%;*/
+/*    background: pink;*/
+/*    text-align: center;*/
+/*    height: 100%;*/
+/*    overflow: hidden;*/
+/*    !*overflow: auto;*!*/
+/*}*/
+/*.main {*/
+/*    !*height: 50%;*!*/
+/*    !*background-color: green;*!*/
+/*    padding-bottom: 50px;*/
+/*    !*overflow: auto;*!*/
+/*}*/
+/*#footer {*/
+/*    height: 50px;*/
+/*    line-height: 50px;*/
+/*    background: deeppink;*/
+/*    text-align: center;*/
+/*    margin-top: -50px;*/
+/*}*/
+
+
+/* float ------------------*/
+/*.main {*/
+/*    height: 60px;*/
+/*    width: 50%;*/
+/*    background: #FFE3D7;*/
+/*}*/
+/*.left {*/
+/*    float: left;*/
+/*}*/
+/*div {*/
+/*    padding: 15px 20px;*/
+/*    font-size: 14px;*/
+/*    color: #333;*/
+/*}*/
+/*.side {*/
+/*    width: 20%;*/
+/*    background: lightblue;*/
+/*}*/
+/*.warp {*/
+/*    border: 1px solid blue;*/
+/*    width: 300px;*/
+/*    margin: 30px auto 5px;*/
+/*    background: #F5F5F5;*/
+/*}*/
+/*.footer {*/
+/*    border: 1px solid #ccc;*/
+/*    background: #EEE;*/
+/*    width: 300px;*/
+/*    margin: 5px auto 30px;*/
+/*}*/
+
+
+/*.clear {*/
+/*    clear: both;*/
+/*}*/
+
+/*.clearfix:after {*/
+/*    clear: both;*/
+/*    content: ".";*/
+/*    display: block;*/
+/*    height: 0;*/
+/*    visibility: hidden;*/
+/*}*/
+/*.clearfix {*/
+/*    *zoom: 1;*/
+/*}*/
+
+/*body {*/
+/*    height: 100%;*/
+/*}*/
+/*.parent {*/
+/*    display:flex;*/
+/*    height: 100%;*/
+/*}*/
+/*.left{*/
+/*    width: 50px;*/
+/*    flex-grow: 1;*/
+/*}*/
+/*.right {*/
+/*    !*margin-left:20px;*!*/
+/*    !*flex:1;*!*/
+/*    !*float:right;*!*/
+/*}*/
+/*.right-item {*/
+/*    background-color: lightgreen;*/
+/*    border: 1px solid red;*/
+/*    !*width:300px;*!*/
+/*    width: 300px !important;*/
+/*    flex-grow: 1;*/
+/*}*/
+
+
+/* 对齐方式的 样式*/
+
+/*.parent11 {*/
+/*    text-align: center;*/
+/*    !*height: 500px;*!*/
+/*}*/
+
+/*.child11 {*/
+/*    background-color: lightblue;*/
+/*    width: 200px;*/
+/*    height: 150px;*/
+/*    !*display: inline-block;   !*  行内元素   *!*!*/
+/*    margin: 0 auto; !* 固定宽度   在子级上 设置 auto水平 居中*!*/
+/*}*/
+
+
+/* */
+/*.container {*/
+/*    text-align: center;*/
+/*    background: beige;*/
+/*}*/
+
+/*.container ul {*/
+/*    list-style: none;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.container li {*/
+/*    margin-right: 8px;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*场景1：子元素是行内元素，高度是由其内容撑开的*/
+/*.wrap{*/
+/*    width:200px ;*/
+/*    height: 300px;*/
+/*    line-height: 300px;*/
+/*    border: 2px solid #ccc;*/
+/*}*/
+/*.span{*/
+/*    background: red;*/
+/*}*/
+
+/*场景2：子元素是块级元素但是子元素高度没有设定，*/
+/*.wrap {*/
+/*    width: 200px;*/
+/*    height: 300px;*/
+/*    border: 2px solid #ccc;*/
+/*    display: table-cell;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.non-height {*/
+/*    background: green;*/
+/*    height: 50px;*/
+/*}*/
+
+
+/*.test{*/
+/*    text-align: center;*/
+/*    line-height: 100px;*/
+/*}*/
+
+/*3.2水平+垂直对齐*/
+/*.parent{*/
+/*    display: table-cell;*/
+/*    text-align: center;*/
+/*    vertical-align: middle;*/
+/*}*/
+/*.child{*/
+/*    display: inline-block;*/
+/*}*/
+
+
+/*.parent{*/
+/*    text-align: center;*/
+/*    line-height: 100px;*/
+/*    font-size: 0;*/
+/*}*/
+/*.child{*/
+/*    vertical-align: middle;*/
+/*}*/
+
+
+/*!*使用absolute，利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto*!*/
+/*.parent33{*/
+/*    position: relative;*/
+/*}*/
+/*.child33{*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    height: 50px;*/
+/*    width: 80px;*/
+/*    margin: auto;*/
+/*}*/
+
+
+.outContainer{
+    /*width: ...; 依据实际给width*/
+    position:relative;
+    overflow:hidden;
+}
+.outContainer span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+.outContainer  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: .25s;
+}
+.outContainer span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: .50s;
+}
+.outContainer span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: .75s;
+}
+@keyframes animate2{
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+@keyframes animate3{
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+@keyframes animate4{
+    0% {
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}

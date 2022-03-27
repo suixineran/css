@@ -1,0 +1,19 @@
+.warp {
+    border: #03e9f4 solid 2px;
+    height: 300px;
+    margin: auto;
+    /*background-color: red;*/
+}
+
+
+
+.inner-div {
+    margin: auto;
+    border: #5bc734 solid 2px;
+    height: 150px;
+    /*background-color: yellow;*/
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    background: linear-gradient(to right, red 20px, yellow 30%, green 10%);
+}
+
+

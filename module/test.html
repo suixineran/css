@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+
+<!--<div class="outContainer">-->
+<!--    <span>1</span>-->
+<!--    <span>1</span>-->
+<!--    <span>1</span>-->
+<!--    <span>1</span>-->
+<!--</div>-->
+
+<!--行内元素 水平和垂直对齐-->
+<!--<div>-->
+<!--     <span class="line-item1">第一项</span>-->
+<!--     <span class="line-item3">第2项</span>-->
+<!--     <span class="line-item2">第3项</span>-->
+<!--</div>-->
+
+<!--<H1> 一（1）单列布局</H1>-->
+<!--<div class="header"></div>-->
+<!--<div class="content"></div>-->
+<!--<div class="footer"></div>-->
+
+<!--<H2> 一 （2）单列布局 通栏</H2>-->
+<!--<div class="header">-->
+<!--    <div class="nav"></div>-->
+<!--</div>-->
+<!--<div class="content"></div>-->
+<!--<div class="footer"></div>-->
+
+<!--<span class="span-class">11111</span>-->
+<!--<span class="span-class">11111</span>-->
+<!--<span class="span-class">11111</span>-->
+
+
+<!--  行内 与块级元素的区别-->
+<!--<h3> inline-block </h3>-->
+<!--<div>-->
+<!--    比如 inline-block 元素也可以设置 vertical-align（因为这个垂直对齐属性只对设置了inline-block的元素有效）-->
+<!--    使用inline-block 会产生元素间的空隙-->
+<!--    如何取消inline-block产生的间隙-->
+<!--    第一种：使用负值的margin各个浏览器的负值也不相同，才能完美贴合-->
+<!--    第二种：在父元素的css中设置word-spacing负值-->
+<!--    https://blog.csdn.net/danglina123/article/details/82254746-->
+<!--</div>-->
+
+<!--<div class="inline-block-class">-->
+<!--    <a href="" > i is a</a>-->
+<!--    <a href=""> i is a</a>-->
+<!--    <a href=""> i is a</a>-->
+<!--    <a href=""> i is a</a>-->
+<!--    <a href=""> i is a</a>-->
+<!--</div>-->
+
+
+<!--<h1> 2栏的布局  浮动</h1>-->
+
+<!--<div class="parent" style="background-color: lightgrey;">-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="right"  style="background-color: lightgreen;">-->
+<!--        <p>right</p>-->
+<!--        <p>right</p>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<H1>  五、粘连布局  </H1>-->
+<!--<H1>  五、粘连布局  </H1>-->
+<!--<div id="wrap">-->
+<!--    <div class="main">-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--        main<br/>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div id="footer">footer</div>-->
+
+<!--<h1> float-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h1>-->
+<!--https://www.jianshu.com/p/2c1708a73438-->
+
+<!--<div class="warp">-->
+<!--    <div class="main left">-->
+<!--        .main:我是主要内容-->
+<!--    </div>-->
+<!--    <div class="side left">-->
+<!--        .side:我是侧边栏-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="footer">-->
+<!--    我是一个footer-->
+<!--</div>-->
+
+<!--<div class="warp">-->
+<!--    <div class="main left">-->
+<!--        .main:很抱歉，现代浏览器中我没能把warp撑高（float:left）-->
+<!--    </div>-->
+<!--    <div class="side left">-->
+<!--        .side:我也浮动了（float:left）-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="footer clear">-->
+<!--    .footer:我通过设置clear:both <strong>清除浮动</strong>，虽然位置正确了，但是wrap的高度没变，还是没达到想要的效果-->
+<!--</div>-->
+
+
+<!--<div class="warp clearfix">-->
+<!--    <div class="main left">-->
+<!--        .main:warp自己闭合浮动了，所以footer不用再清除浮动了（float:left）-->
+<!--    </div>-->
+<!--    <div class="side left">-->
+<!--        .side:我也浮动了（float:left）-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div class="footer clear">-->
+<!--    .footer:warp通过 .clearfix 已经<strong>闭合浮动</strong>了-->
+<!--</div>-->
+
+<!--<h1> 2栏的布局 flex</h1>-->
+<!--注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。-->
+
+<!--<div class="parent" style="background-color: lightgrey;">-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div> <div class="left" style="background-color: lightblue;">-->
+<!--    <p>left</p>-->
+<!--</div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div> <div class="left" style="background-color: lightblue;">-->
+<!--    <p>left</p>-->
+<!--</div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div> <div class="left" style="background-color: lightblue;">-->
+<!--    <p>left</p>-->
+<!--</div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div> <div class="left" style="background-color: lightblue;">-->
+<!--    <p>left</p>-->
+<!--</div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+<!--    <div class="left" style="background-color: lightblue;">-->
+<!--        <p>left</p>-->
+<!--    </div>-->
+
+
+
+
+
+<!--&lt;!&ndash;    <div class="right right-item" style="height:50px;width:50px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:450px;width:450px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:350px;width:350px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:250px;width:250px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:150px;width:150px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;<div class="right right-item" style="height:50px;width:50px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:450px;width:450px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:350px;width:350px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:250px;width:250px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <div class="right right-item" style="height:150px;width:150px;">&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;        <p>right</p>&ndash;&gt;-->
+<!--&lt;!&ndash;    </div>&ndash;&gt;-->
+
+<!--</div>-->
+
+
+
+
+
+
+
+
+<!--            对齐方式的 dmo------------------       -------------------->
+<!--<H1> 说明 行内元素的 直接会有空隙</H1>-->
+
+<!--<span>xxxx</span><span>xxxx</span>-->
+<!--<button style="float:left;">xxxx1</button>-->
+<!--<button style="float:left;">xxxx2</button>-->
+<!--<button>xxxx3</button>-->
+<!--<button>xxxx4</button>-->
+<!--<div>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</div>-->
+
+<!--<h1>父级是容器  水平对齐-->
+<!--    行内元素  父级 text-align: center;  子级display: inline-block;-->
+<!--    块级元素  固定宽度  父级 text-align: center;  子级margin: 0 auto;-->
+<!--    不固定宽度-->
+<!--    感觉text-align  可以多层继承-->
+<!--</h1>-->
+
+<!--<div class="parent11" style="background-color: gray;">-->
+<!--    <div class="child11" >DEMO0</div>-->
+<!--    <div class="child11" >DEMO1</div>-->
+<!--    <div class="child11" >-->
+<!--        <div>xxxxxxxxxx</div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<div>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</div>-->
+<!-- -->
+
+<!--<div class="container">-->
+<!--    <ul>-->
+<!--        <li><a href="#">1</a></li>-->
+<!--        <li><a href="#">2</a></li>-->
+<!--        <li><a href="#">3</a></li>-->
+<!--    </ul>-->
+
+<!--</div>-->
+
+<!--场景1：子元素是行内元素，高度是由其内容撑开的-->
+<!--<div class="wrap line-height">-->
+<!--    <span class="span">111111</span>-->
+<!--</div>-->
+
+<!--场景2：子元素是块级元素但是子元素高度没有设定，-->
+<!--<div class="wrap">-->
+<!--    <div class="non-height ">11111</div>-->
+<!--</div>-->
+
+
+<!--3.1水平对齐+行高-->
+
+<!--text-align + line-height实现单行文本水平垂直居中-->
+
+<!--<div class="test" style="background-color: lightblue;width: 200px;">测试文字</div>-->
+
+
+<!--3.2水平+垂直对齐-->
+<!--1. text-align + vertical-align　　在父元素设置text-align和vertical-align，并将父元素设置为table-cell元素，子元素设置为inline-block元素-->
+
+<!--<div class="parent" style="background-color: gray; width:200px; height:100px;">-->
+<!--    <div class="child" style="background-color: lightblue;">测试文字</div>-->
+<!--</div>-->
+
+
+
+<!--<div class="parent" style="background-color: gray; width:200px; ">-->
+<!--    <img class="child" src="http://sandbox.runjs.cn/uploads/rs/26/ddzmgynp/img1.gif" width="50%" alt="test">-->
+<!--</div>-->
+
+<!--使用absolute，利用绝对定位元素的盒模型特性，在偏移属性为确定值的基础上，设置margin:auto-->
+
+<!--<div class="parent33" style="background-color: lightgray; width:200px; height:100px; ">-->
+<!--    <div class="child33" style="background-color: lightblue;">测试文字</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+<script>
+
+</script>
+</body>
+</html>
