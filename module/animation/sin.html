@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        #div {
+            width: 10px;
+            height: 10px;
+            background: red;
+            position: absolute;
+            top: 500px;
+            left: 200px;
+        }
+
+        .box {
+            position: absolute;
+            border: 1px solid #000;
+        }
+    </style>
+<body>
+<div id="div"></div>
+<canvas id="c" style="width: 500px; height:500px; border: 1px solid red;"></canvas>
+</body>
+
+<script>
+    window.onload = function () {
+
+        // var oDiv=document.getElementById('div');
+        // var startX=oDiv.offsetLeft;
+        // var startY=oDiv.offsetTop;
+        // var num=0;
+        // var count=100;
+        // setInterval(function(){
+        //
+        //   num++
+        //   //count用来放大运动的轨迹
+        //   //num*Math.PI/180 代表弧度
+        //   oDiv.style.left=startX+0.5*(num*Math.PI/180)*count+'px';
+        //   oDiv.style.top=startY-2*Math.sin(num*Math.PI/180)*count+'px';
+        //   var oDiv1=document.createElement('div');
+        //   oDiv1.className='box';
+        //   oDiv1.style.left=oDiv.offsetLeft+'px';
+        //   oDiv1.style.top=oDiv.offsetTop+'px';
+        //   document.body.appendChild(oDiv1);
+        //
+        // },10);
+
+
+        var oC = document.getElementById('c');
+        var oGC = oC.getContext('2d');
+        var setArr = [];  //存储圆心坐标  半径  颜色等数据，以json的形式存储数据
+
+        setInterval(function () {
+            oGC.clearRect(0, 0, oC.width, oC.height);
+            for (var i = 0; i < setArr.length; i++) {
+                //通过改变圆心的坐标来实现曲线运动
+                setArr[i].num++;
+                setArr[i].X = setArr[i].startX - 2 * Math.sin(setArr[i].num * Math.PI / 180) * setArr[i].step;
+                setArr[i].Y = setArr[i].startY - 3 * (setArr[i].num * Math.PI / 180) * setArr[i].step;
+                // 小球消失的判断条件
+                if (setArr[i].Y < 0 || setArr[i].X < 0) {
+                    setArr.splice(i, 1);
+                }
+            }
+            for (var i = 0; i < setArr.length; i++) {
+                oGC.fillStyle = 'rgba(' + setArr[i].c1 + ',' + setArr[i].c2 + ',' + setArr[i].c3 + ',' + setArr[i].c4 + ')';
+                oGC.beginPath();
+                oGC.moveTo(setArr[i].X, setArr[i].Y);
+                oGC.arc(setArr[i].X, setArr[i].Y, setArr[i].R, 0, 360 * Math.PI / 180);
+                oGC.closePath();
+                oGC.fill();
+            }
+        }, 100);
+
+        function pullbll() {
+            var x = Math.random() * oC.width;
+            var y = oC.height - 10;
+            var r = Math.random() * 6 + 2;
+            var c1 = Math.round(Math.random() * 255);  // 随机生成颜色
+            var c2 = Math.round(Math.random() * 255); // 随机生成颜色
+            var c3 = Math.round(Math.random() * 255);// 随机生成颜色
+            var c4 = 1;// 随机 透明度
+
+
+            var step = Math.random() * 20 + 10;
+            var num = 0;
+            var startX = x;
+            var startY = y;
+            setArr.push({
+                X: x,
+                Y: y,
+                R: r,
+                c1: c1,
+                c2: c2,
+                c3: c3,
+                c4: c4,
+                num: num,
+                step: step,
+                startX: x,
+                startY: y
+            })
+        }
+
+        pullbll()
+
+        //  生成的 小球个数
+        for (let i = 0; i < 10; i++) {
+            pullbll()
+
+        }
+
+    }
+</script>
+</html>

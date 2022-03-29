@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>二次贝塞尔曲线</h1>
+<canvas id="canvas" width=400 height=400 style="border: 1px solid #ccc;"></canvas>
+
+</body>
+<script>
+    let pa1 = [200, 400]
+    let cpa = [100, 50]
+    let pa2 = [0, 0]
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+
+    // 画运动轨迹  star change  end
+    function drawline() {
+        context.beginPath();
+        context.moveTo(...pa1);
+        context.quadraticCurveTo(...cpa, ...pa2);
+        context.strokeStyle = "red";
+        context.stroke();
+    }
+
+    // 运动的小球
+    function drawball(site) {
+        context.fillStyle = 'rgb(194,11,54)';
+        context.beginPath();
+        context.moveTo(site.x, site.y);
+        context.arc(site.x, site.y, 5, 0, 360 * Math.PI / 180);
+        context.closePath();
+        context.fill();
+    }
+
+    // 获取 贝塞尔 每个点的坐标  //参数分别是t,起始点,控制点和终点
+    function twoOrderBezier(t, p1, cp, p2) {
+        var [x1, y1] = p1,
+            [cx, cy] = cp,
+            [x2, y2] = p2;
+        var x = (1 - t) * (1 - t) * x1 + 2 * t * (1 - t) * cx + t * t * x2,
+            y = (1 - t) * (1 - t) * y1 + 2 * t * (1 - t) * cy + t * t * y2;
+        return [x, y];
+    }
+
+    // 曲线上的坐标 细分多少个点
+    let sitearr = []
+    let dotNum = 101
+    for (let i = 0; i < dotNum; i++) {
+        let a = i * (1 / (dotNum - 1))
+        let o = twoOrderBezier(a, pa1, cpa, pa2,)
+        let site = {
+            x: o[0],
+            y: o[1],
+        }
+        sitearr.push(site)
+    }
+
+    let num = 0
+
+    // setInterval(() => {
+    //
+    //     num += 1
+    //     if (num === 101) {
+    //         num = 0
+    //     }
+    //     // 每次 先清空画布 再更新 新的坐标 重新画
+    //     context.clearRect(0, 0, 400, 400);
+    //     drawline()
+    //     drawball(sitearr[num])
+    // }, 100)
+
+
+
+
+
+    // 动画的调用
+    function anim() {
+        num += 1
+        if (num === 101) {
+            num = 0
+        }
+        // 每次 先清空画布 再更新 新的坐标 重新画
+        context.clearRect(0, 0, 400, 400);
+        drawline()
+        drawball(sitearr[num])
+        requestAnimationFrame(anim)
+
+    }
+    requestAnimationFrame(anim)
+
+
+
+</script>
+</html>

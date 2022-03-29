@@ -1,6 +1,6 @@
-
 /*
-* 每个CSS属性定义的概述都指出了这个属性是默认继承的，还是默认不继承的。这决定了当你没有为元素的属性指定值时该如何计算值。
+* 每个CSS属性定义的概述都指出了这个属性是默认继承的，还是默认不继承的。
+* 这决定了当你没有为元素的属性指定值时该如何计算值。
 
 当元素的一个继承属性没有指定值时，则取父元素的同属性的计算值。
 * 只有文档根元素取该属性的概述中给定的初始值（这里的意思应该是在该属性本身的定义中的默认值）。
@@ -11,7 +11,8 @@
 有继承性的属性：
 
 （1）字体系列属性
-font、font-family、font-weight、font-size、font-style、font-variant、font-stretch、font-size-adjust
+font、font-family、font-weight、font-size、font-style、font-variant、font-stretch、
+* font-size-adjust
 
 （2）文本系列属性
 text-indent、text-align、text-shadow、line-height、word-spacing、letter-spacing、
@@ -39,7 +40,8 @@ visibility
 * position 的值 relative 和 absolute 定位原点是？
 * absolute
 生成绝对定位的元素，相对于值不为static的第一个父元素的padding box进行定位，
-* 也可以理解为离自己这一级元素最近的一级position设置为absolute或者relative的父元素的padding box的左上角为原点的。
+* 也可以理解为离自己这一级元素最近的一级position设置
+* 为absolute或者relative的父元素的padding box的左上角为原点的。
 
 fixed（老IE不支持）
 生成绝对定位的元素，相对于浏览器窗口进行定位。

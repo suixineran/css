@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas-ball</title>
+</head>
+<body>
+
+<canvas id="myCanvas" style="width: 900px; border: 1px solid red"></canvas>
+</body>
+<script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+
+    let ball = {
+        x: 0,
+        y: 100,
+        r: 10,
+        dx: 2,
+        rgbaColorArr: [111, 123, 222, 1],
+        draw() {
+            const {x, y, r, rgbaColorArr} = this
+            ctx.beginPath()
+            ctx.fillStyle = `rgba(${rgbaColorArr.join(',')})`
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.closePath()
+            ctx.fillStyle = `rgba(${rgbaColorArr.join(',')})`
+            ctx.fill();
+            // ctx.stroke();
+        },
+        move() {
+            this.x += this.dx
+            this.draw()
+        },
+        animate() {
+            const d = 9000 // 动画时长 1000ms
+            const update = (t) => {
+                // 清除画布
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // 移动小球并重新绘制
+                this.x += this.dx
+                this.draw()
+
+                if (t < d) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+    }
+
+
+    ball.animate()
+
+    // 作者：橙红年代
+    // 链接：https://juejin.cn/post/6896115251239092232
+    // 来源：稀土掘金
+    // 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</script>
+</html>

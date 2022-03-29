@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #edom {
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+            zoom: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="edom"></div>
+<script>
+    var dom = document.getElementById("edom");
+    var flag = true;
+    //当前执行时间
+    var nowTime = 0;
+    //记录每次动画执行结束的时间
+    var lastTime = Date.now();
+    //我们自己定义的动画时间差值
+    var diffTime = 10;
+    var left = 100;
+
+    function render() {
+        console.log('--------render------')
+        // requestAnimationFrame(render);
+        if (flag == true) {
+            if (left >= 200) {
+                flag = false
+            }
+            dom.style.left = ` ${left++}px`
+        } else {
+            if (left <= 0) {
+                flag = true
+            }
+            dom.style.left = ` ${left--}px`
+        }
+        console.log('left', left)
+    }
+
+    //requestAnimationFrame效果
+    // (function animloop() {
+    //     //记录当前时间
+    //     nowTime = Date.now()
+    //     console.log('---------animloop-', nowTime, lastTime)
+    //     // 当前时间-上次执行时间如果大于diffTime，那么执行动画，并更新上次执行时间
+    //     if (nowTime - lastTime > diffTime) {
+    //         lastTime = nowTime
+    //         render();
+    //     }
+    //     // requestAnimationFrame(animloop);
+    // })()
+
+    function animloop() {
+        //记录当前时间
+        nowTime = Date.now()
+        console.log('---------animloop-递归 ', nowTime, lastTime)
+        // 当前时间-上次执行时间如果大于diffTime，那么执行动画，并更新上次执行时间
+        if (nowTime - lastTime > diffTime) {
+            lastTime = nowTime
+            render();
+        }
+        requestAnimationFrame(animloop);
+        // animloop()
+    }
+
+
+    // // 停止动画效果
+    // (function animloop(time) {
+    //     console.log('----animloop-----')
+    //     render();
+    //     rafId = requestAnimationFrame(animloop);
+    //     //如果left等于10 停止动画
+    //     if (left == 200) {
+    //         cancelAnimationFrame(rafId)
+    //     }
+    // })()
+
+    //
+    // setInterval(function () {
+    //     render()
+    // }, 1000 / 60)
+
+    //  需要递归调用 才会循环执行
+    //  或者把判断写到 另一个方法中 控制 停止的动作
+    //  要递归谁 就把 requestAnimationFrame(fun) 写在谁的方法中
+    // requestAnimationFrame(render);
+    // requestAnimationFrame(animloop);
+    // animloop()
+
+</script>
+</body>
+</html>

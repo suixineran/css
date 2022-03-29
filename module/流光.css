@@ -90,36 +90,36 @@ a span:nth-child(4) {
 
 }
 
-/*@keyframes animate2 {*/
-/*    0% {*/
-/*        top: -100%;*/
-/*    }*/
-/*    50%, 100% {*/
-/*        top: 100%;*/
-/*    }*/
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
 
-/*}*/
+}
 
-/*@keyframes animate3 {*/
-/*    0% {*/
-/*        right: -100%;*/
-/*    }*/
-/*    50%, 100% {*/
-/*        right: 100%;*/
-/*    }*/
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
 
-/*}*/
+}
 
-/*@keyframes animate4 {*/
-/*    0% {*/
-/*        bottom: -100%;*/
-/*    }*/
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
 
-/*    50%, 100% {*/
-/*        bottom: 100%;*/
-/*    }*/
+    50%, 100% {
+        bottom: 100%;
+    }
 
-/*}*/
+}
 
 .back-span {
     width: 739px;
