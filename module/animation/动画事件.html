@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .self {
+      animation: www 2s 4;
+      background-color: red;
+    }
+
+    @keyframes www {
+      from {
+        width: 20px;
+      }
+      to{
+        width: 60px;
+      }
+
+
+    }
+  </style>
+</head>
+<body>
+　　　<div class="self" id="self">xxxxxxx</div>
+
+</body>
+<script>
+  var o = document.getElementById("self");
+  o.addEventListener("webkitAnimationStart", function() {
+
+    console.log("动画开始");
+  })
+  // 动画重复运动时事件
+  o.addEventListener("webkitAnimationIteration", function() {
+
+    console.log("动画重复运动");
+  })
+  // 动画结束时事件
+  o.addEventListener("webkitAnimationEnd", function() {
+
+    console.log("动画结束");
+  })
+</script>
+
+</html>
