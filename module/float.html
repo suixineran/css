@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>z-index</title>
+  <style>
+
+    .main {
+      height: 60px;
+      width: 50%;
+      background: #FFE3D7;
+    }
+    .left {
+      float: left;
+    }
+    div {
+      padding: 15px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    .side {
+      width: 20%;
+      background: lightblue;
+    }
+    .warp {
+      border: 1px solid blue;
+      width: 300px;
+      margin: 30px auto 5px;
+      background: #F5F5F5;
+    }
+    .footer {
+      border: 1px solid #ccc;
+      background: #EEE;
+      width: 300px;
+      margin: 5px auto 30px;
+    }
+  </style>
+</head>
+<body>
+<div class="warp">
+  <div class="main left">
+    .main:我是主要内容
+  </div>
+  <div class="side left">
+    .side:我是侧边栏
+  </div>
+</div>
+<div class="footer">
+  我是一个footer
+</div>
+</body>
+</html>
